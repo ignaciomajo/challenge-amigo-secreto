@@ -42,8 +42,8 @@ function agregarAmigo() {
         // Agregar el "Node" a la lista ul
         listaImprimir.append(li);
     }
-    console.log(listaAmigos)
-    
+    //console.log(listaAmigos)
+    return 
 }
 
 
@@ -52,12 +52,12 @@ function agregarAmigo() {
 function sortearAmigo() {
     // Almacenar la longitud de la lista para establecer el máximo índice
     let lenLista = listaAmigos.length;
-    console.log(lenLista);
+    //console.log(lenLista);
     // Generar un número pseudo aleatorio a partir de la longitud de la lista
     // Se utiliza floor ya que el índice mínimo es 0
     let indiceAleatorio = Math.floor(Math.random() * lenLista);
-    console.log(indiceAleatorio);
-    console.log(listaAmigos[indiceAleatorio]);
+    //console.log(indiceAleatorio);
+    //console.log(listaAmigos[indiceAleatorio]);
     // Obtener el objeto "result-list"
     let resultado = document.getElementById('resultado')
     // Cambiar el valor de texto por el Amigo Secreto seleccionado aleatoriamente
