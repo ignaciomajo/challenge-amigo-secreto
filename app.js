@@ -13,20 +13,33 @@ let listaAmigos = [];
 
 // *****     FUNCIONES     *****
 
+
+// Limpiar caja
+
+function limpiarCaja() {
+    let valorCaja = document.getElementById('amigo');
+    valorCaja.value = ''
+}
+
 // Agregar nombres a la lista
 
-function agregarNombre() {
+function agregarAmigo() {
 
     let nombreIngresado = document.getElementById('amigo').value
     if (nombreIngresado === '') {
         alert('Debe ingresar un nombre, por favor, inténtelo nuevamente');
     } else {
         listaAmigos.push(nombreIngresado);
+        imprimirLista();
     }
+    console.log(listaAmigos)
+    
 }
 
 // Validar entrada
 
 // Visualizar lista
+
+
 
 // Sorteo aleatorio
