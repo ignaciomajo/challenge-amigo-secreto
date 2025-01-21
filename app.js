@@ -58,6 +58,10 @@ function sortearAmigo() {
     let indiceAleatorio = Math.floor(Math.random() * lenLista);
     console.log(indiceAleatorio);
     console.log(listaAmigos[indiceAleatorio]);
+    // Obtener el objeto "result-list"
+    let resultado = document.getElementById('resultado')
+    // Cambiar el valor de texto por el Amigo Secreto seleccionado aleatoriamente
+    resultado.textContent = listaAmigos[indiceAleatorio]
 
     return listaAmigos[indiceAleatorio]
     
