@@ -7,6 +7,8 @@
 // Lista para almacenar los nombres ingresados por el usuario
 let listaAmigos = [];
 
+// Lista para almacenar los nombres sorteados por el sistema
+let amigosSorteados = [];
 
 // *****     FUNCIONES     *****
 
@@ -14,10 +16,20 @@ let listaAmigos = [];
 // Limpiar caja
 
 function limpiarCaja() {
-    // Obtener el objeto "input"
-    let valorCaja = document.getElementById('amigo');
-    // Limpar el valor para dejarlo vacío
-    valorCaja.value = '';
+    // Obtener el objeto "input" y dejarlo vacío
+    document.getElementById('amigo').value = '';
+}
+
+// Activar y desactivar botones 
+
+function desactivarBoton(id) {
+    // Agregar atributo "disabled" a la etiqueta del botón
+    document.getElementById(id).setAttribute('disabled', true);
+}
+
+function activarBoton(id) {
+    // Agregar atributo "disabled" a la etiqueta del botón
+    document.getElementById(id).removeAttribute('disabled');
 }
 
 // Agregar nombres a la lista
@@ -28,6 +40,9 @@ function agregarAmigo() {
     if (nombreIngresado === '') {
         // Indicar al usuario que debe ingresar un valor válido
         alert('Debe ingresar un nombre, por favor, inténtelo nuevamente');
+    } else if (listaAmigos.includes(nombreIngresado)) {
+        // Si el nombre ya existe, damos una alerta informando al usuario para que ingrese el nombre de otra forma.
+        alert(`¡${nombreIngresado} ya existe!, debes ingresar nombres distintos, intenta agregando la primera letra del apellido de tu amigo.`)
     } else {
         // Agregar nombre ingresado por el usuario a la lista de amigos
         listaAmigos.push(nombreIngresado);
@@ -43,7 +58,7 @@ function agregarAmigo() {
         listaImprimir.append(li);
     }
     //console.log(listaAmigos)
-    return 
+    return;
 }
 
 
@@ -56,13 +71,43 @@ function sortearAmigo() {
     // Generar un número pseudo aleatorio a partir de la longitud de la lista
     // Se utiliza floor ya que el índice mínimo es 0
     let indiceAleatorio = Math.floor(Math.random() * lenLista);
+    // Definir el amigo secreto
+    const amigoSecreto = listaAmigos[indiceAleatorio];
+    if (lenLista < 1) {
+        alert(`Antes de sortear nombres, debes haber añadido los nombres de tus amigos en el sistema`)
+    } else if (amigosSorteados.includes(amigoSecreto)) {
+        // Si aun faltan amigos por sortear utilizamos recursividad para obtener siempre un amigo secreto distinto
+        if (lenLista > amigosSorteados.length) {
+        return sortearAmigo();
+        } else {
+            // Informar al usuario que ya han sido sorteados todos los nombres
+            alert('Ya han sido sorteados todos tus amigos, ahora cada uno tiene su "Amigo Secreto".');
+            // Informamos que se borrara el contenido.
+            alert('¡Atención!, al salir de esta advertencia se borrará el último nombre. Asegúrate de recordarlo.')
+            // Borramos el ultimo nombre del amigo secreto
+            let resultado = document.getElementById('resultado');
+            resultado.textContent = '';
+            // Borramos la lista
+            let listaBorrar = document.getElementById('listaAmigos')
+            listaBorrar.textContent = ''
+            // Desactivamos el botón de sortear y añadir
+            desactivarBoton('sortear')
+            desactivarBoton('agregar')
+            // Mensaje de juego finalizado en el título
+            let h2 = document.querySelector('h2')
+            h2.innerHTML = 'Juego finalizado'
+        }
+    } else {
     //console.log(indiceAleatorio);
     //console.log(listaAmigos[indiceAleatorio]);
     // Obtener el objeto "result-list"
-    let resultado = document.getElementById('resultado')
+    let resultado = document.getElementById('resultado');
     // Cambiar el valor de texto por el Amigo Secreto seleccionado aleatoriamente
-    resultado.textContent = listaAmigos[indiceAleatorio]
-
-    return listaAmigos[indiceAleatorio]
-    
+    resultado.textContent = `El amigo secreto es: ¡${amigoSecreto}!`;
+    amigosSorteados.push(amigoSecreto)
+    // Salir de la función
+    return amigoSecreto;
+    }   
 }
+
+activarBoton('agregar');
