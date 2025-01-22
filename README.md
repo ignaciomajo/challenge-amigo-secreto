@@ -19,6 +19,9 @@
 *Presento aquí un sistema sencillo para jugar con tus amigos. En esas ocasiones donde necesitas un "Amigo Invisible" o un "Secret Santa", esta pequeña aplicación web te será de gran ayuda.<br>
 Sin la necesidad de papel y lápiz, ahora podras ingresar los nombres de cada integrante de tu grupo y asignar un "Amigo Secreto" a cada uno de ustedes desde tu tablet o teléfono movil.*<br>
 
+
+## 2. Demostración de funciones y aplicaciones
+
 Esta será la pantalla inicial:
 ![Pantalla inicial](https://github.com/user-attachments/assets/a0782679-6d8b-473d-9dd2-88c0c28a1c83)
 
@@ -44,6 +47,41 @@ Una vez se hayan sorteado todos los nombres de la lista, el sistema informará d
 Esta deberá ser la pantalla final:
 
 ![Juego finalizado](https://github.com/user-attachments/assets/e578f979-44ef-41a5-ad87-917ff55f73e9)
+
+## Acceso al proyecto
+
+Para utilizar la aplicación, solo es necesario descargar el repositorio completo y abrir el archivo llamado index.html en tu navegador web.
+
+![Open file](https://github.com/user-attachments/assets/c650e133-2d14-4b73-9dd2-5fb3fcd8e195)
+
+Con un editor de texto podrás acceder a los archivos `JavaScript`, `HTML` y `CSS` donde se encuentra el código fuente.
+
+
+## Tecnologías utilizadas
+
+`Visual Studio Code`
+`Git and GitHub`
+`JavaScript`
+`HTML`
+`CSS`
+
+## Personas contribuyentes
+
+Quiero agradecer a Oracle y Alura LATAM por proporcionar las bases necesarias para la realización de este proyecto, y por su alianza que hace posible este programa de capacitación para el desarrollo del futuro en tecnología.
+
+![Alura LATAM](https://github.com/user-attachments/assets/92a155ab-bcbb-41c6-8bbc-a0e8f552eb0f)
+
+![Orcale](https://github.com/user-attachments/assets/f399257d-d637-44be-809e-4bac2232fe25)
+
+![ONE](https://github.com/user-attachments/assets/368ff23a-e3f2-4f08-a987-0f736996779c)
+
+## Desarrollador del proyecto
+
+![Foto personal](https://github.com/user-attachments/assets/c51ae895-f7df-472e-a600-0719b9d5cf7e) <br>
+| Ignacio Majo |
+
+
+
 
 
 
