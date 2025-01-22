@@ -42,7 +42,7 @@ function agregarAmigo() {
         alert('Debe ingresar un nombre, por favor, inténtelo nuevamente');
     } else if (listaAmigos.includes(nombreIngresado)) {
         // Si el nombre ya existe, damos una alerta informando al usuario para que ingrese el nombre de otra forma.
-        alert(`¡${nombreIngresado} ya existe!, debes ingresar nombres distintos, intenta agregando la primera letra del apellido de tu amigo.`)
+        alert(`¡${nombreIngresado} ya existe!, debes ingresar nombres distintos, intenta agregando la primera letra del apellido de tu amigo/a.`)
     } else {
         // Agregar nombre ingresado por el usuario a la lista de amigos
         listaAmigos.push(nombreIngresado);
@@ -72,16 +72,14 @@ function sortearAmigo() {
     // Definir el amigo secreto
     const amigoSecreto = listaAmigos[indiceAleatorio];
     if (lenLista < 1) {
-        alert(`Antes de sortear nombres, debes haber añadido los nombres de tus amigos en el sistema`)
+        alert(`Antes de sortear nombres, debes haber añadido los nombres de tus amigos/as en el sistema`)
     } else if (amigosSorteados.includes(amigoSecreto)) {
         // Si aun faltan amigos por sortear utilizamos recursividad para obtener siempre un amigo secreto distinto
         if (lenLista > amigosSorteados.length) {
         return sortearAmigo();
         } else {
             // Informar al usuario que ya han sido sorteados todos los nombres
-            alert('Ya han sido sorteados todos tus amigos, ahora cada uno tiene su "Amigo Secreto".');
-            // Informamos que se borrara el contenido.
-            alert('¡Atención!, al salir de esta advertencia se borrará el último nombre. Asegúrate de recordarlo.')
+            alert('Ya han sido sorteados todos tus amigos/as, ahora cada uno/a tiene su "Amigo Secreto".');
             // Borramos el ultimo nombre del amigo secreto
             let resultado = document.getElementById('resultado');
             resultado.textContent = '';
@@ -99,8 +97,12 @@ function sortearAmigo() {
     // Obtener el objeto "result-list"
     let resultado = document.getElementById('resultado');
     // Cambiar el valor de texto por el Amigo Secreto seleccionado aleatoriamente
-    resultado.textContent = `El amigo secreto es: ¡${amigoSecreto}!`;
+    resultado.textContent = `Tu amigo/a secreto/a es: ¡${amigoSecreto}!`;
     amigosSorteados.push(amigoSecreto)
+    alert('El nombre del amigo/a secreto/a desaparecerá en 5 segundos. ¡Asegúrate de recordarlo!')
+    setTimeout(() => {
+        resultado.textContent = '';
+    }, 5000);
     // Salir de la función
     return amigoSecreto;
     }   
