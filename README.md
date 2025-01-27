@@ -25,7 +25,7 @@ Sin la necesidad de papel y lápiz, ahora podras ingresar los nombres de cada in
 Esta será la pantalla inicial:
 ![Pantalla inicial](https://github.com/user-attachments/assets/a0782679-6d8b-473d-9dd2-88c0c28a1c83)
 
-Escribes el nombre del amigo que deseemos agregar:
+Escribes el nombre del amigo que desees agregar:
 ![Escribir nombre](https://github.com/user-attachments/assets/03a07452-dbd4-4f67-9c35-1f479289e9bd)
 
 Al apretar el botón de "Añadir" verás como los nombres de tus amigos se van agregando a una lista que podrás visualizar:
