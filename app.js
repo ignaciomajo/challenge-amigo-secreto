@@ -37,7 +37,7 @@ function activarBoton(id) {
 function agregarAmigo() {
 
     let nombreIngresado = document.getElementById('amigo').value
-    if (nombreIngresado === '') {
+    if ((nombreIngresado === '') | !isNaN(nombreIngresado))){
         // Indicar al usuario que debe ingresar un valor válido
         alert('Debe ingresar un nombre, por favor, inténtelo nuevamente');
     } else if (listaAmigos.includes(nombreIngresado)) {
