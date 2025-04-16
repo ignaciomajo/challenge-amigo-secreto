@@ -80,7 +80,7 @@ Quiero agradecer a Oracle y Alura LATAM por proporcionar las bases necesarias pa
 ![Foto personal](https://github.com/user-attachments/assets/c51ae895-f7df-472e-a600-0719b9d5cf7e) <br>
 | Ignacio Majo |
 
-
+📫Contacto: ignacio.majoo@gmail.com | 💻[LinkedIn](https://www.linkedin.com/in/ignacio-majo/)
 
 
 
